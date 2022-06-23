@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int ave(int a[],int n){
@@ -9,15 +10,15 @@ int ave(int a[],int n){
 	return (Ave/n);
 }
 
-int mu_even(int k,int l,int a[]){
-	float mu;
-	mu=(a[k]+a[l])/2;
-	return mu; 
+int me_even(int k,int l,int a[]){
+	float me;
+	me=(a[k]+a[l])/2;
+	return me; 
 }
-int mu_odd(int k,int a[]){
-	float mu;
-	mu=a[k]/2;
-	return mu; 
+int me_odd(int k,int a[]){
+	float me;
+	me=a[k];
+	return me; 
 }
 
 int q1_notint(int m,int a[]){
@@ -34,7 +35,7 @@ float q1_int(int m,int a[]){
 
 int q3_notint(int m,int a[]){
 	int q3;
-	q3= a[m+1]/2;
+	q3= a[m+1];
 	return q3;
 }
 float q3_int(int m,int a[]){
@@ -51,14 +52,12 @@ int main()
 	for(int i=1;i<=n;i++){
 		cin>>a[i];
 	}
-	sort(a,a+n);
-
 	cout<<"キА计: "<<ave(a,n)<<endl; 
 	if(n%2==0){
-		cout<<"い计: "<<mu_even((n/2),((n/2)+1),(a))<<endl;
+		cout<<"い计: "<<me_even((n/2),((n/2)+1),(a))<<endl;
 	}
 	else if(n%2==1){
-		cout<<"い计: "<<mu_odd((n/2+1),(a))<<endl; 
+		cout<<"い计: "<<me_odd(((n/2)+1),(a))<<endl; 
 	}
 	
 	if(n%4!=0){
