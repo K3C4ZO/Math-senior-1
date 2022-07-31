@@ -52,21 +52,21 @@ int main()
 	for(int i=1;i<=n;i++){
 		cin>>a[i];
 	}
-	cout<<"キА计: "<<ave(a,n)<<endl; 
+	cout<<"Average: "<<ave(a,n)<<endl; 
 	if(n%2==0){
-		cout<<"い计: "<<me_even((n/2),((n/2)+1),(a))<<endl;
+		cout<<"Median: "<<me_even((n/2),((n/2)+1),(a))<<endl;
 	}
 	else if(n%2==1){
-		cout<<"い计: "<<me_odd(((n/2)+1),(a))<<endl; 
+		cout<<"Median: "<<me_odd(((n/2)+1),(a))<<endl; 
 	}
 	
 	if(n%4!=0){
-		cout<<"材1だ计: "<<q1_notint((n/4),(a))<<endl;
-		cout<<"材3だ计: "<<q3_notint((n/4*3),(a))<<endl; 
+		cout<<"Q1: "<<q1_notint((n/4),(a))<<endl;
+		cout<<"Q3: "<<q3_notint((n/4*3),(a))<<endl; 
 	}
 	else if(n%4==0){
-		cout<<"材1だ计: "<<q1_int((n/4),(a))<<endl;
-		cout<<"材3だ计: "<<q3_int((n/4*3),(a))<<endl;
+		cout<<"Q1: "<<q1_int((n/4),(a))<<endl;
+		cout<<"Q3: "<<q3_int((n/4*3),(a))<<endl;
 	}
 	
 	
